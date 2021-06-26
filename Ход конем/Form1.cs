@@ -26,6 +26,8 @@ namespace Ход_конем
         {
             if (K == 0 || K == 25) return;
 
+            ClearColor();
+
             int k = FindNuminMatrix(K, M)[0];
             int l = FindNuminMatrix(K, M)[1];
 
@@ -104,6 +106,8 @@ namespace Ход_конем
         {
             if (K > 0)
             {
+                ClearColor();
+
                 int i = FindNuminMatrix(K, M)[0];
                 int j = FindNuminMatrix(K, M)[1];
 
@@ -189,7 +193,7 @@ namespace Ход_конем
         private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //if (CloseGame())
-                this.Close();
+            this.Close();
         }
 
         private void обИгреToolStripMenuItem_Click(object sender, EventArgs e)
@@ -339,8 +343,8 @@ namespace Ход_конем
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             //if (!CloseGame()) e.Cancel = true;
-                //else 
-                    e.Cancel = false;
+            //else 
+            e.Cancel = false;
         }
 
         private bool CloseGame()
